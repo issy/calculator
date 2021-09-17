@@ -1,5 +1,4 @@
-from typing import Union, Literal
-
+from typing import Literal, Union
 
 Number = Union[float, int]
 
@@ -41,9 +40,7 @@ def get_number() -> Number:
         return float
 
 
-def do_operation(
-    num_1: Number, operation: Literal["1", "2", "3", "4", "5"], num_2: Number
-) -> Number:
+def do_operation(num_1: Number, operation: Literal["1", "2", "3", "4", "5"], num_2: Number) -> Number:
     operations = {
         "1": "__add__",
         "2": "__sub__",

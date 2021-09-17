@@ -1,6 +1,5 @@
 from calculator import do_operation
 
-
 OPERATION = "1"  # Addition operation
 
 

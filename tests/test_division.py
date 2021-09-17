@@ -1,6 +1,5 @@
 from calculator import do_operation
 
-
 OPERATION = "4"  # Division operation
 
 
