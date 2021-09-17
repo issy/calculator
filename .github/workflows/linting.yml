@@ -1,0 +1,37 @@
+name: Linting
+
+on: [push]
+
+jobs:
+  lint-black:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the repository at the current branch
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.9.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.9.6"
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          pip install black
+      - name: Lint with black
+        run: |
+          black --diff .
+  lint-isort:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the repository at the current branch
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.9.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.9.6"
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          pip install isort
+      - name: Lint with isort
+        run: |
+          isort --check --diff .
