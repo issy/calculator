@@ -42,7 +42,7 @@ def get_number() -> Number:
 
 
 def do_operation(
-    num_1: Number, operation: Literal["1", "2", "3", "4"], num_2: Number
+    num_1: Number, operation: Literal["1", "2", "3", "4", "5"], num_2: Number
 ) -> Number:
     operations = {
         "1": "__add__",
