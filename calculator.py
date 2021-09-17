@@ -48,7 +48,7 @@ def do_operation(
         "1": "__add__",
         "2": "__sub__",
         "3": "__mul__",
-        "4": "__div__",
+        "4": "__truediv__",
         "5": "__mod__",
     }
     return getattr(num_1, operations[operation])(num_2)
