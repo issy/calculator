@@ -1,4 +1,4 @@
-from calculator import do_operation
+from main import do_operation
 
 OPERATION = "3"  # Multiplication operation
 
